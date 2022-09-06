@@ -1,38 +1,36 @@
 {
-  "schemaVersion": 1,
-  "id": "modid",
-  "version": "${version}",
-
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
-  "authors": [
-    "Me!"
-  ],
-  "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
-  },
-
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
-
-  "environment": "*",
-  "entrypoints": {
-    "main": [
-      "net.fabricmc.example.ExampleMod"
-    ]
-  },
-  "mixins": [
-    "modid.mixins.json"
-  ],
-
-  "depends": {
-    "fabricloader": ">=0.14.9",
-    "fabric-api": "*",
-    "minecraft": "~1.19",
-    "java": ">=17"
-  },
-  "suggests": {
-    "another-mod": "*"
-  }
+	"schemaVersion": 1,
+	"id": "dothack",
+	"version": "${version}",
+	"name": "dotHack Mod",
+	"description": "Looks to bring the various mobs and items from the PS2/PS4/PC game series called dotHack",
+	"authors": [
+		"AzureDoom"
+	],
+	"contact": {
+		"homepage": "https://www.curseforge.com/minecraft/mc-mods/azuredoom-dothack-mod",
+		"sources": "https://github.com/AzureDoom/dotHack-Mod"
+	},
+	"license": "MIT",
+	"icon": "assets/dothack/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"mod.azure.dothack.DotHackMod"
+		],
+		"client": [
+			"mod.azure.dothack.client.DotHackClientMod"
+		]
+	},
+	"mixins": [
+		"dothack.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.9",
+		"fabric-api": "*",
+		"minecraft": "~1.19",
+		"java": ">=17",
+		"geckolib3": ">=3.1.7",
+		"trinkets": ">=3.4.0"
+	}
 }

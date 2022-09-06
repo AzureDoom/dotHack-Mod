@@ -1,0 +1,3 @@
+v.0.0.1
+
+- Barebones entities add with basic AI that is far from completed. New animations and more AI planned for next update. 
