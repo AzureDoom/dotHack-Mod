@@ -112,8 +112,8 @@ if (file('key.properties').exists()) {
         	relations {
             		requiredDependency 'fabric-api'  
             		requiredDependency 'geckolib'  
-            		requiredDependency 'trinkets'  
-            		optionalDependency 'better-combat-by-daedelus' 
+            		requiredDependency 'better-combat-by-daedelus' 
+                	requiredDependency 'playeranimator'
         	}
         	mainArtifact(remapJar)
         	afterEvaluate {
@@ -142,9 +142,9 @@ if (file('key.properties').exists()) {
 		loaders = ['fabric']
 		dependencies { 
         		required.project "geckolib"
-        		required.project "trinkets"
         		required.project "fabric-api"
-        		optional.project "better-combat"
+        		required.project "better-combat"
+            	required.project "playeranimator"
    		}
 	}
 }

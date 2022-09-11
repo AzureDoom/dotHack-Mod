@@ -18,6 +18,8 @@ public class DotHackMod implements ModInitializer {
 	public static final String MODID = "dothack";
 	public static final CreativeModeTab NPC_TAB = FabricItemGroupBuilder.create(new ResourceLocation(MODID, "entities"))
 			.icon(() -> new ItemStack(DotHackItems.AZUREKITE_SPAWN_EGG)).build();
+	public static final CreativeModeTab ITEM_TAB = FabricItemGroupBuilder.create(new ResourceLocation(MODID, "items"))
+			.icon(() -> new ItemStack(DotHackItems.ULTIMATESTEEL)).build();
 //	public static final CreativeModeTab BLOCKS = FabricItemGroupBuilder.create(new ResourceLocation(MODID, "blocks"))
 //			.icon(() -> new ItemStack(DotHackItems.AZUREKITE_SPAWN_EGG)).build();
 

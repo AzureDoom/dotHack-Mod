@@ -65,7 +65,7 @@ public class DotHackMobs {
 	static EntityType<NPCEntity> npc(String id) {
 		return Registry.register(Registry.ENTITY_TYPE, new ResourceLocation(DotHackMod.MODID, id),
 				FabricEntityTypeBuilder.create(MobCategory.CREATURE, NPCEntity::new)
-						.dimensions(EntityDimensions.fixed(1.1F, 2.1F)).trackRangeBlocks(90).trackedUpdateRate(4)
+						.dimensions(EntityDimensions.fixed(1.1F, 2.1F)).trackRangeBlocks(90).trackedUpdateRate(1)
 						.build());
 	}
 
@@ -73,11 +73,11 @@ public class DotHackMobs {
 	public static final EntityType<SkeithEntity> SKEITH = Registry.register(Registry.ENTITY_TYPE,
 			new ResourceLocation(DotHackMod.MODID, "skeith"),
 			FabricEntityTypeBuilder.create(MobCategory.MONSTER, SkeithEntity::new)
-					.dimensions(EntityDimensions.fixed(3.0f, 6.5F)).trackRangeBlocks(90).trackedUpdateRate(4).build());
+					.dimensions(EntityDimensions.fixed(3.0f, 6.5F)).trackRangeBlocks(90).trackedUpdateRate(1).build());
 
 	// Mobs
 	public static final EntityType<ChimChimEntity> CHIMCHIM = Registry.register(Registry.ENTITY_TYPE,
 			new ResourceLocation(DotHackMod.MODID, "chimchim"),
 			FabricEntityTypeBuilder.create(MobCategory.MONSTER, ChimChimEntity::new)
-					.dimensions(EntityDimensions.fixed(0.6f, 1.0F)).trackRangeBlocks(90).trackedUpdateRate(4).build());
+					.dimensions(EntityDimensions.fixed(0.6f, 1.0F)).trackRangeBlocks(90).trackedUpdateRate(1).build());
 }

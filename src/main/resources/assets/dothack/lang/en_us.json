@@ -99,9 +99,13 @@
 	"item.dothack.twinbladef_spawn_egg": "Twinblade Female Egg",
 	"item.dothack.wavemasterf_spawn_egg": "Wavemaster Female Egg",
 	"item.dothack.zelkova_spawn_egg": "Zelkova Egg",
+	"item.dothack.ultimatesteel": "Ultimate Steel",
+	"item.dothack.flamesword": "Flame Sword",
+	"item.dothack.spingaigu": "Spin Gai Gu",
 	"block.dothack.ohnomelon": "Oh No Melon",
 	"block.dothack.normalchest": "Normal Chest",
 	"block.dothack.trapchest": "Trap Chest",
+	"itemGroup.dothack.items": ".Hack Items",
 	"itemGroup.dothack.blocks": ".Hack Blocks",
 	"itemGroup.dothack.entities": ".Hack Eggs"
 }

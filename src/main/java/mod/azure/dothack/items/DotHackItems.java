@@ -5,6 +5,7 @@ import mod.azure.dothack.entities.DotHackMobs;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Tiers;
 
 public class DotHackItems {
 
@@ -58,6 +59,10 @@ public class DotHackItems {
 	
 	public static HackSpawnEgg CHIMCHIM_SPAWN_EGG = item(new HackSpawnEgg(DotHackMobs.CHIMCHIM), "chimchim_spawn_egg");
 	public static HackSpawnEgg SKEITH_SPAWN_EGG = item(new HackSpawnEgg(DotHackMobs.SKEITH), "skeith_spawn_egg");
+	
+	public static UltimateSteelItem ULTIMATESTEEL = item(new UltimateSteelItem(), "ultimatesteel");
+	public static BaseSwordItem FLAMESWORD = item(new BaseSwordItem(Tiers.DIAMOND, 20, -3.05F), "flamesword");
+	public static BaseSwordItem SPINGAIGU = item(new BaseSwordItem(Tiers.IRON, 20, -2.5F), "spingaigu");
 
 	static <T extends Item> T item(T c, String id) {
 		Registry.register(Registry.ITEM, new ResourceLocation(DotHackMod.MODID, id), c);
