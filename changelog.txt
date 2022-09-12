@@ -1,3 +1,10 @@
-v.0.0.1
+v.0.0.2
 
-- Barebones entities add with basic AI that is far from completed. New animations and more AI planned for next update. 
+- Started work on the weapons, no recipes but does require Better Combat now to work. Player Animator will be used when I get to staffs and grimoires but currently required for Better Combat.
+ - Added Dorje Hatcheta
+ - Added Spin Drake
+ - Added Spin Ribs
+ - Added Spin Gia Gu
+ - Added Flame Sword
+ - Added Ultimate Steel
+ - Added Golden Spear 

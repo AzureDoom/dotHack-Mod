@@ -62,7 +62,13 @@ public class DotHackItems {
 	
 	public static UltimateSteelItem ULTIMATESTEEL = item(new UltimateSteelItem(), "ultimatesteel");
 	public static BaseSwordItem FLAMESWORD = item(new BaseSwordItem(Tiers.DIAMOND, 20, -3.05F), "flamesword");
+	
+	public static BaseSwordItem GOLDENSPEAR = item(new BaseSwordItem(Tiers.IRON, 20, -3.05F), "goldenspear");
+	
 	public static BaseSwordItem SPINGAIGU = item(new BaseSwordItem(Tiers.IRON, 20, -2.5F), "spingaigu");
+	public static BaseSwordItem DORJEHETCHETA = item(new BaseSwordItem(Tiers.IRON, 20, -2.5F), "dorjehatcheta");
+	public static BaseSwordItem SPINDRAKE = item(new BaseSwordItem(Tiers.IRON, 20, -2.5F), "spindrake");
+	public static BaseSwordItem SPINRIBS = item(new BaseSwordItem(Tiers.IRON, 20, -2.5F), "spinribs");
 
 	static <T extends Item> T item(T c, String id) {
 		Registry.register(Registry.ITEM, new ResourceLocation(DotHackMod.MODID, id), c);

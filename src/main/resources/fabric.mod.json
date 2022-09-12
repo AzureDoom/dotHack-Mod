@@ -31,6 +31,7 @@
 		"minecraft": "~1.19",
 		"java": ">=17",
 		"geckolib3": ">=3.1.7",
-		"trinkets": ">=3.4.0"
+		"bettercombat": ">=1.3.1",
+		"player-animator": ">=0.3.5"
 	}
 }

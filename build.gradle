@@ -33,7 +33,7 @@ repositories {
 	maven { url = "https://ladysnake.jfrog.io/artifactory/mods" }
 	maven { url = "https://maven.kosmx.dev/" }
 	maven { url 'https://jitpack.io' }
-        maven { url = 'https://maven.parchmentmc.org' }
+	maven { url = 'https://maven.parchmentmc.org' }
 }
 
 dependencies {
@@ -59,8 +59,8 @@ dependencies {
     	modApi("me.shedaniel.cloth:cloth-config-fabric:8.0.75") {
 		exclude(group: "net.fabricmc.fabric-api")
 	}
-	modCompileOnly "curse.maven:BetterC-639842:3949059"
-	modCompileOnly "dev.kosmx.player-anim:player-animation-lib-fabric:0.3.0"
+	modCompileOnly "curse.maven:BetterC-639842:3971355"
+	modCompileOnly "dev.kosmx.player-anim:player-animation-lib-fabric:0.3.5"
 	modApi "com.github.ZsoltMolnarrr:TinyConfig:1.0.2"
 }
 
@@ -82,7 +82,7 @@ processResources {
 		    jsonBytesSaved += oldLength - file.length()
 		}
 		println('Minified ' + jsonMinified + ' json files. Saved ' + jsonBytesSaved + ' bytes. Took ' + (System.currentTimeMillis() - jsonMinifyStart) + 'ms.')
-    	}
+    }
 }
 
 tasks.withType(JavaCompile).configureEach {
