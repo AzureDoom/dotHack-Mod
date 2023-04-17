@@ -1,10 +1,4 @@
-v.0.0.2
+v.0.0.3
 
-- Started work on the weapons, no recipes but does require Better Combat now to work. Player Animator will be used when I get to staffs and grimoires but currently required for Better Combat.
- - Added Dorje Hatcheta
- - Added Spin Drake
- - Added Spin Ribs
- - Added Spin Gia Gu
- - Added Flame Sword
- - Added Ultimate Steel
- - Added Golden Spear 
+- Updated to 1.19.4.
+- Moved mobs to SBL. 

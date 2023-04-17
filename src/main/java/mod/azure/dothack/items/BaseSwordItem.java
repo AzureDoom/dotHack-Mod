@@ -1,44 +1,44 @@
 package mod.azure.dothack.items;
 
-import mod.azure.dothack.DotHackMod;
+import java.util.function.Supplier;
+
+import mod.azure.azurelib.animatable.GeoItem;
+import mod.azure.azurelib.core.animatable.instance.AnimatableInstanceCache;
+import mod.azure.azurelib.core.animation.AnimatableManager.ControllerRegistrar;
+import mod.azure.azurelib.core.animation.AnimationController;
+import mod.azure.azurelib.core.object.PlayState;
+import mod.azure.azurelib.util.AzureLibUtil;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
-import software.bernie.geckolib3.core.IAnimatable;
-import software.bernie.geckolib3.core.PlayState;
-import software.bernie.geckolib3.core.controller.AnimationController;
-import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
-import software.bernie.geckolib3.core.manager.AnimationData;
-import software.bernie.geckolib3.core.manager.AnimationFactory;
-import software.bernie.geckolib3.util.GeckoLibUtil;
 
-public class BaseSwordItem extends SwordItem implements IAnimatable {
+public abstract class BaseSwordItem extends SwordItem implements GeoItem {
 
-	private AnimationFactory factory = GeckoLibUtil.createFactory(this);
-	public String controllerName = "controller";
+	protected final AnimatableInstanceCache cache = AzureLibUtil.createInstanceCache(this, true);
+	protected final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
 
 	public BaseSwordItem(Tier tier, int damage, float speed) {
-		super(tier, damage, speed, new Item.Properties().stacksTo(1).tab(DotHackMod.ITEM_TAB));
+		super(tier, damage, speed, new Item.Properties().stacksTo(1));
 	}
 
 	@Override
 	public boolean isFoil(ItemStack stack) {
 		return false;
 	}
-
-	public <P extends Item & IAnimatable> PlayState predicate(AnimationEvent<P> event) {
-		return PlayState.CONTINUE;
+	@Override
+	public void registerControllers(ControllerRegistrar controllers) {
+		controllers.add(new AnimationController<>(this, "shoot_controller", event -> PlayState.CONTINUE));
 	}
 
 	@Override
-	public void registerControllers(AnimationData data) {
-		data.addAnimationController(new AnimationController(this, controllerName, 1, this::predicate));
+	public AnimatableInstanceCache getAnimatableInstanceCache() {
+		return this.cache;
 	}
 
 	@Override
-	public AnimationFactory getFactory() {
-		return this.factory;
+	public Supplier<Object> getRenderProvider() {
+		return this.renderProvider;
 	}
 
 }

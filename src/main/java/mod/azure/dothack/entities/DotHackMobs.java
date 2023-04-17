@@ -6,6 +6,7 @@ import mod.azure.dothack.entities.bosses.SkeithEntity;
 import mod.azure.dothack.entities.mobs.ChimChimEntity;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.EntityType;
@@ -63,20 +64,20 @@ public class DotHackMobs {
 	public static final EntityType<NPCEntity> ZELKOVA = npc("zelkova");
 
 	static EntityType<NPCEntity> npc(String id) {
-		return Registry.register(Registry.ENTITY_TYPE, new ResourceLocation(DotHackMod.MODID, id),
+		return Registry.register(BuiltInRegistries.ENTITY_TYPE, new ResourceLocation(DotHackMod.MODID, id),
 				FabricEntityTypeBuilder.create(MobCategory.CREATURE, NPCEntity::new)
 						.dimensions(EntityDimensions.fixed(1.1F, 2.1F)).trackRangeBlocks(90).trackedUpdateRate(1)
 						.build());
 	}
 
 	// Bosses
-	public static final EntityType<SkeithEntity> SKEITH = Registry.register(Registry.ENTITY_TYPE,
+	public static final EntityType<SkeithEntity> SKEITH = Registry.register(BuiltInRegistries.ENTITY_TYPE,
 			new ResourceLocation(DotHackMod.MODID, "skeith"),
 			FabricEntityTypeBuilder.create(MobCategory.MONSTER, SkeithEntity::new)
 					.dimensions(EntityDimensions.fixed(3.0f, 6.5F)).trackRangeBlocks(90).trackedUpdateRate(1).build());
 
 	// Mobs
-	public static final EntityType<ChimChimEntity> CHIMCHIM = Registry.register(Registry.ENTITY_TYPE,
+	public static final EntityType<ChimChimEntity> CHIMCHIM = Registry.register(BuiltInRegistries.ENTITY_TYPE,
 			new ResourceLocation(DotHackMod.MODID, "chimchim"),
 			FabricEntityTypeBuilder.create(MobCategory.MONSTER, ChimChimEntity::new)
 					.dimensions(EntityDimensions.fixed(0.6f, 1.0F)).trackRangeBlocks(90).trackedUpdateRate(1).build());

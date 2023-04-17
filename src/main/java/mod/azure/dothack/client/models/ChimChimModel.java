@@ -1,11 +1,11 @@
 package mod.azure.dothack.client.models;
 
+import mod.azure.azurelib.model.GeoModel;
 import mod.azure.dothack.DotHackMod;
 import mod.azure.dothack.entities.mobs.ChimChimEntity;
 import net.minecraft.resources.ResourceLocation;
-import software.bernie.geckolib3.model.AnimatedTickingGeoModel;
 
-public class ChimChimModel extends AnimatedTickingGeoModel<ChimChimEntity> {
+public class ChimChimModel extends GeoModel<ChimChimEntity> {
 
 	@Override
 	public ResourceLocation getAnimationResource(ChimChimEntity animatable) {

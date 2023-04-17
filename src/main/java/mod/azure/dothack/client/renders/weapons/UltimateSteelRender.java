@@ -1,49 +1,13 @@
 package mod.azure.dothack.client.renders.weapons;
 
-import com.mojang.blaze3d.platform.Lighting;
-import com.mojang.blaze3d.systems.RenderSystem;
-import com.mojang.blaze3d.vertex.PoseStack;
-
+import mod.azure.azurelib.renderer.GeoItemRenderer;
 import mod.azure.dothack.client.models.weapons.UltimateSteelModel;
 import mod.azure.dothack.items.UltimateSteelItem;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.client.renderer.block.model.ItemTransforms.TransformType;
-import net.minecraft.world.item.ItemStack;
-import software.bernie.geckolib3.renderers.geo.GeoItemRenderer;
 
 public class UltimateSteelRender extends GeoItemRenderer<UltimateSteelItem> {
-	private TransformType currentTransform;
 
 	public UltimateSteelRender() {
 		super(new UltimateSteelModel());
-	}
-
-	@Override
-	public void render(ItemStack itemStack, TransformType mode, PoseStack matrixStackIn, MultiBufferSource bufferIn,
-			int combinedLightIn, int combinedOverlayIn) {
-		currentTransform = mode;
-		if (mode == TransformType.GUI) {
-			matrixStackIn.pushPose();
-			MultiBufferSource.BufferSource irendertypebuffer$impl = Minecraft.getInstance().renderBuffers()
-					.bufferSource();
-			Lighting.setupForFlatItems();
-			super.render(itemStack, mode, matrixStackIn, bufferIn, combinedLightIn, combinedOverlayIn);
-			irendertypebuffer$impl.endBatch();
-			RenderSystem.enableDepthTest();
-			Lighting.setupFor3DItems();
-			matrixStackIn.popPose();
-		} else {
-			super.render(itemStack, mode, matrixStackIn, bufferIn, combinedLightIn, combinedOverlayIn);
-		}
-	}
-
-	@Override
-	public Integer getUniqueID(UltimateSteelItem animatable) {
-		if (currentTransform == TransformType.GUI) {
-			return -1;
-		}
-		return super.getUniqueID(animatable);
 	}
 
 }

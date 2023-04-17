@@ -1,11 +1,11 @@
 package mod.azure.dothack.client.models;
 
+import mod.azure.azurelib.model.GeoModel;
 import mod.azure.dothack.DotHackMod;
 import mod.azure.dothack.entities.bosses.SkeithEntity;
 import net.minecraft.resources.ResourceLocation;
-import software.bernie.geckolib3.model.AnimatedTickingGeoModel;
 
-public class SkiethModel extends AnimatedTickingGeoModel<SkeithEntity> {
+public class SkiethModel extends GeoModel<SkeithEntity> {
 
 	@Override
 	public ResourceLocation getAnimationResource(SkeithEntity animatable) {

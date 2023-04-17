@@ -1,11 +1,12 @@
 package mod.azure.dothack.client.models;
 
+import mod.azure.azurelib.model.GeoModel;
 import mod.azure.dothack.DotHackMod;
 import mod.azure.dothack.entities.bases.NPCEntity;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
-import software.bernie.geckolib3.model.AnimatedTickingGeoModel;
 
-public class NPCModel extends AnimatedTickingGeoModel<NPCEntity> {
+public class NPCModel extends GeoModel<NPCEntity> {
 
 	protected final ResourceLocation TEXTURE_DEFAULT;
 
@@ -27,6 +28,11 @@ public class NPCModel extends AnimatedTickingGeoModel<NPCEntity> {
 	@Override
 	public ResourceLocation getTextureResource(NPCEntity object) {
 		return this.TEXTURE_DEFAULT;
+	}
+
+	@Override
+	public RenderType getRenderType(NPCEntity animatable, ResourceLocation texture) {
+		return RenderType.entityTranslucent(texture);
 	}
 
 }

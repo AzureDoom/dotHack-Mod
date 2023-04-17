@@ -50,22 +50,13 @@ import mod.azure.dothack.client.renders.npcs.TwinbladeFRender;
 import mod.azure.dothack.client.renders.npcs.TwinbladeRender;
 import mod.azure.dothack.client.renders.npcs.WaveMasterFRender;
 import mod.azure.dothack.client.renders.npcs.ZelkovaRender;
-import mod.azure.dothack.client.renders.weapons.DorjeHatchetaRender;
-import mod.azure.dothack.client.renders.weapons.FlameSwordRender;
-import mod.azure.dothack.client.renders.weapons.GoldenSpearRender;
-import mod.azure.dothack.client.renders.weapons.SpinDrakeRender;
-import mod.azure.dothack.client.renders.weapons.SpinGaiGuRender;
-import mod.azure.dothack.client.renders.weapons.SpinRibsRender;
-import mod.azure.dothack.client.renders.weapons.UltimateSteelRender;
 import mod.azure.dothack.entities.DotHackMobs;
-import mod.azure.dothack.items.DotHackItems;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.resources.ResourceLocation;
-import software.bernie.geckolib3.renderers.geo.GeoItemRenderer;
 
 public class DotHackClientMod implements ClientModInitializer {
 
@@ -121,16 +112,6 @@ public class DotHackClientMod implements ClientModInitializer {
 
 		EntityRendererRegistry.register(DotHackMobs.CHIMCHIM, (ctx) -> new ChimChimRender(ctx));
 		EntityRendererRegistry.register(DotHackMobs.SKEITH, (ctx) -> new SkeithRender(ctx));
-		
-		GeoItemRenderer.registerItemRenderer(DotHackItems.ULTIMATESTEEL, new UltimateSteelRender());
-		GeoItemRenderer.registerItemRenderer(DotHackItems.FLAMESWORD, new FlameSwordRender());
-		
-		GeoItemRenderer.registerItemRenderer(DotHackItems.SPINGAIGU, new SpinGaiGuRender());
-		GeoItemRenderer.registerItemRenderer(DotHackItems.DORJEHETCHETA, new DorjeHatchetaRender());
-		GeoItemRenderer.registerItemRenderer(DotHackItems.SPINDRAKE, new SpinDrakeRender());
-		GeoItemRenderer.registerItemRenderer(DotHackItems.SPINRIBS, new SpinRibsRender());
-		
-		GeoItemRenderer.registerItemRenderer(DotHackItems.GOLDENSPEAR, new GoldenSpearRender());
 
 		FabricLoader.getInstance().getModContainer(DotHackMod.MODID).ifPresent(container -> {
 			ResourceManagerHelper.registerBuiltinResourcePack(asId("azureskin"), container, ResourcePackActivationType.NORMAL);

@@ -1,11 +1,11 @@
 package mod.azure.dothack.client.models.weapons;
 
+import mod.azure.azurelib.model.GeoModel;
 import mod.azure.dothack.DotHackMod;
 import mod.azure.dothack.items.BaseSwordItem;
 import net.minecraft.resources.ResourceLocation;
-import software.bernie.geckolib3.model.AnimatedGeoModel;
 
-public class BaseSwordModel extends AnimatedGeoModel<BaseSwordItem> {
+public class BaseSwordModel extends GeoModel<BaseSwordItem> {
 
 	protected final ResourceLocation TEXTURE_DEFAULT;
 	protected final ResourceLocation MODEL_DEFAULT;
