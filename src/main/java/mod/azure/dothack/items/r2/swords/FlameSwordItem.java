@@ -1,4 +1,4 @@
-package mod.azure.dothack.items.r2.staffs;
+package mod.azure.dothack.items.r2.swords;
 
 import java.util.function.Consumer;
 

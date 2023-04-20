@@ -7,7 +7,7 @@ import mod.azure.dothack.items.r2.daggers.SpinDrakeItem;
 import mod.azure.dothack.items.r2.daggers.SpinGaiguItem;
 import mod.azure.dothack.items.r2.daggers.SpinRibsItem;
 import mod.azure.dothack.items.r2.spears.GoldenSpearItem;
-import mod.azure.dothack.items.r2.staffs.FlameSwordItem;
+import mod.azure.dothack.items.r2.swords.FlameSwordItem;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
