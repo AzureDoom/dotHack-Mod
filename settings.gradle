@@ -6,6 +6,7 @@ pluginManagement {
         }
         mavenCentral()
         gradlePluginPortal()
+    	maven { url  = 'https://plugins.gradle.org/m2/' }
     }
 }
-rootProject.name = 'dotHack-fabric-1.20'
+rootProject.name = 'dotHack-fabric-1.20.1'
